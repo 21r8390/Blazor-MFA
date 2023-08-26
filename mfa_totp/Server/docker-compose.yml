@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mfa-sql-server
+    ports:
+      - 8432:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password123!
+      - MSSQL_PID=Developer
